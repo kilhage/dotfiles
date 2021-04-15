@@ -34,3 +34,16 @@
         default = simple
 [credential]
 	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Emil Kilhage
+	email = emilkilhage@gmail.com
+	signingkey = CDEBFA65815D5B75FD83B7BEE2CB433C9FBC8A47
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
